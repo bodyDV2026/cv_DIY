@@ -129,11 +129,14 @@ section {
 .card {
     background-color: #fff;
     width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    box-shadow: 0 5px 25px rgba(0, 183, 255, 0.15);
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
     transition: 0.7s ease;
+}
+.card:hover{
+    color: #3cbdec;
 }
 
 
