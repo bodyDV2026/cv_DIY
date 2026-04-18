@@ -15,6 +15,26 @@ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbIT
 </head>
 
 <body>
+      <style>
+      body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Lato", sans-serif;
+      
+      }
+      
+    #clock {
+      height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(#018DED, lightblue);
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+  </style>
 
     <header>
         <a href="#" class="logo">abdalrhman</a>
@@ -25,6 +45,40 @@ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbIT
         </nav>
         
     </header>
+     <div id="clock">
+  </div>
+  <script>
+    function clock (){
+      let date =new Date()
+      let hours=date.getHours()
+      let minutes=date.getMinutes()
+      let seconds=date.getSeconds()
+      let period="AM";
+
+      if (hours = 0){
+        hours = 12 ;
+      }
+    else if(hours >= 12){
+      hours =hours-12;
+      period="PM";
+    }
+    hours = hours <10 ? "0" + hours:hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+seconds = seconds < 10 ? "0" + seconds : seconds;
+    let time = `${hours}:${minutes}:${seconds} ${period}`;
+     document.getElementById("clock").innerText = time;
+     
+
+    }
+    setInterval(clock, 1000);
+    
+    document.getElementById("clock").innerText = time;
+
+    clock();
+ 
+
+
+  </script>
 
     <section class="main">
         <div>
