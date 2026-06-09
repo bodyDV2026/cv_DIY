@@ -24,3 +24,10 @@ function setDate(){
 setInterval(setDate,1000
 )
 setDate()
+function copyText() {
+  const textToCopy = document.getElementById('textToCopy').textContent;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert('Text copied to clipboard!');
+  }
+  );
+}
