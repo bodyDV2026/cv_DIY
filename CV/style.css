@@ -315,5 +315,6 @@ section {
     background-repeat: no-repeat;
 }
 #Certificates {
-    background-color: #000016;
+   background: #96e1ff;
+background: linear-gradient(81deg, rgba(150, 225, 255, 1) 0%, rgba(87, 199, 133, 1) 42%, rgba(255, 233, 36, 1) 100%);
 }
